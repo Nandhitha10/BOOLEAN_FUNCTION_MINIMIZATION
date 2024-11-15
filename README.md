@@ -35,12 +35,24 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+Developed by: RegisterNumber:*/ S NANDHITHA 24900454
 
 
 **RTL realization**
+module halfadder(a, b, s, ca);
+ input a;
+ input b;
+ output s;
+ output ca;
+assign s=a^b;
+assign ca=a&b;
+endmodule
+
 
 **Output:**
+![Screenshot 2024-11-15 140736](https://github.com/user-attachments/assets/5fd487e4-53bc-4601-a1c0-8902674b0e4b)
+![Screenshot 2024-11-15 141510](https://github.com/user-attachments/assets/70d458df-84a2-469a-89aa-cb957bd6e985)
+
 
 **RTL**
 
