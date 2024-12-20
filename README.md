@@ -33,30 +33,37 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+Developed by: S NANDHITHA
 
-Developed by: RegisterNumber:*/ S NANDHITHA 24900454
+RegisterNumber:  24900454
 
+~~~
+module DE2(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
+~~~
 
 **RTL realization**
-module halfadder(a, b, s, ca);
- input a;
- input b;
- output s;
- output ca;
-assign s=a^b;
-assign ca=a&b;
-endmodule
+![image](https://github.com/user-attachments/assets/2f8b636f-576b-4adf-a500-77703512b697)
+
 
 
 **Output:**
-![Screenshot 2024-11-15 140736](https://github.com/user-attachments/assets/5fd487e4-53bc-4601-a1c0-8902674b0e4b)
-![Screenshot 2024-11-15 141510](https://github.com/user-attachments/assets/70d458df-84a2-469a-89aa-cb957bd6e985)
-
-
-**RTL**
-
-**Timing Diagram**
+![image](https://github.com/user-attachments/assets/6e3040b2-6131-4004-a943-849dbbda425e)
 
 **Result:**
 
